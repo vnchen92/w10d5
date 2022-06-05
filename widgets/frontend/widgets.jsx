@@ -20,6 +20,7 @@ const Root = () => {
       <div>
         <Clock />
       </div>
+      <h1>Tabs</h1>
       <div className="tabs">
         <h1>
           {tabs.map((tab) => (

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 class Tab extends Component {
   state = {
-    title: this.getTitle,
-    content: this.getContent,
+    title: this.props.title,
+    content: this.props.content,
     idx: 0,
   };
 
@@ -22,7 +22,7 @@ class Tab extends Component {
     return (
       <div className="tabs-container">
         <header>
-          <h1>{title}</h1>
+          <h2>{title}</h2>
         </header>
       </div>
     );
