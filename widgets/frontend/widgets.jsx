@@ -21,9 +21,11 @@ const Root = () => {
         <Clock />
       </div>
       <div className="tabs">
-        {/* {tabs.map((tab) => (
-          <Tab title={tab.title} content={tab.content} key={tab.idx} />
-        ))} */}
+        <h1>
+          {tabs.map((tab) => (
+            <Tab title={tab.title} content={tab.content} key={tab.idx} />
+          ))}
+        </h1>
       </div>
     </div>
   );
