@@ -5,39 +5,41 @@ class Clock extends Component {
     time: new Date(),
   };
 
-  tick = this.tick.bind(this);
-
-  tick() {
+  tick = () => {
     const time = new Date();
     this.setState({ time });
-  }
+  };
 
-  componentDidMount() {
+  componentDidMount = () => {
     this.interval = setInterval(this.tick, 1000);
-  }
+  };
 
-  componentWillUnmount() {
+  componentWillUnmount = () => {
     clearInterval(this.interval);
-  }
+  };
 
-  render() {
+  render = () => {
     const { time } = this.state;
     //debugger
     return (
-      <div className="clock-container">
-        <h1>CLOCK</h1>
-        <h2>
-          Time: {time.getHours()}:{time.getMinutes()}:{time.getSeconds()} EST
-        </h2>
-        <br />
-        <h2>
-          Date: {time.getMonth()} {time.getDate()} {time.getFullYear()}{' '}
-        </h2>
-        <br />
-        <h2></h2>
+      <div className="clock">
+        <div className="data-type">
+          <h2>Time:</h2>
+          <br />
+          <h2>Date:</h2>
+        </div>
+        <div className="data">
+          <h2>
+            {time.getHours()}:{time.getMinutes()}:{time.getSeconds()} EST
+          </h2>
+          <br />
+          <h2>
+            {time.getMonth()} {time.getDate()} {time.getFullYear()}{' '}
+          </h2>
+        </div>
       </div>
     );
-  }
+  };
 }
 
 export default Clock;

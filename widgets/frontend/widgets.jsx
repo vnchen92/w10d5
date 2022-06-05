@@ -16,7 +16,8 @@ const Root = () => {
   ];
   return (
     <div className="widgets">
-      <div className="clock">
+      <h1>Clock</h1>
+      <div>
         <Clock />
       </div>
       <div className="tabs">

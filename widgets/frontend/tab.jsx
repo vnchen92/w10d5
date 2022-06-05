@@ -7,13 +7,13 @@ class Tab extends Component {
     idx: 0,
   };
 
-  render() {
+  render = () => {
     return (
       <div className="tabs-container">
         <header>THIS WORKS</header>
       </div>
     );
-  }
+  };
 }
 
 export default Tab;

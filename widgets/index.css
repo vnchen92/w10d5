@@ -10,12 +10,18 @@ body {
 }
 
 .clock  {
-    display: flex;
-    justify-content: center;
     max-width: 500px;
-    max-height:200px;
+    max-height: 200px;
     background-color: orange;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
 }
+
+
+.clock-container {
+}
+
 
 .tabs {
     display: flex;
