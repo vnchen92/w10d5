@@ -10,7 +10,7 @@ class Tab extends Component {
   render() {
     return (
       <div className="tabs-container">
-        <header></header>
+        <header>THIS WORKS</header>
       </div>
     );
   }

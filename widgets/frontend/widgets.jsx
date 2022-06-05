@@ -9,16 +9,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const Root = () => {
-  const tabs = [{}, {}, {}];
+  const tabs = [
+    { title: '1', content: '', idx: 0 },
+    { title: '2', content: '', idx: 1 },
+    { title: '3', content: '', idx: 2 },
+  ];
   return (
     <div className="widgets">
       <div className="clock">
         <Clock />
       </div>
       <div className="tabs">
-        {tabs.map((tab) => (
+        {/* {tabs.map((tab) => (
           <Tab title={tab.title} content={tab.content} key={tab.idx} />
-        ))}
+        ))} */}
       </div>
     </div>
   );
