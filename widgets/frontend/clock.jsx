@@ -20,7 +20,9 @@ class Clock extends Component {
 
   render = () => {
     const { time } = this.state;
-    //debugger
+    const formatTime = (time) => {
+      return String(time).padStart(2, '0');
+    };
     return (
       <div className="clock">
         <div className="data-type">
@@ -30,11 +32,12 @@ class Clock extends Component {
         </div>
         <div className="data">
           <h2>
-            {time.getHours()}:{time.getMinutes()}:{time.getSeconds()} EST
+            {formatTime(time.getHours())}:{formatTime(time.getMinutes())}:
+            {formatTime(time.getSeconds())} EST
           </h2>
           <br />
           <h2>
-            {time.getMonth()} {time.getDate()} {time.getFullYear()}{' '}
+            {time.getMonth()} / {time.getDate()} / {time.getFullYear()}{' '}
           </h2>
         </div>
       </div>
