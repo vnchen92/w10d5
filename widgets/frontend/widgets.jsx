@@ -9,13 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const Root = () => {
+  const tabs = [{}, {}, {}];
   return (
     <div className="widgets">
       <div className="clock">
         <Clock />
       </div>
       <div className="tabs">
-        <Tab />
+        {tabs.map((tab) => (
+          <Tab title={tab.title} content={tab.content} key={tab.idx} />
+        ))}
       </div>
     </div>
   );
